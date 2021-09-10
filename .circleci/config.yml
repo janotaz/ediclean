@@ -19,3 +19,7 @@ jobs:
       - run:
           name: Run tests
           command: pytest
+
+          command: |
+            pip3 install -r requirements.txt
+            pytest
