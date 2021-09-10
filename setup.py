@@ -7,7 +7,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 setup(
     name='ediclean',
     version='0.1.1',
-    description='Clean UN/EDIFACT PAXLST files from unsupported characters.',
+    description='A Python package to strip non-standard text blocks from UN/EDIFACT messages.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/janotaz/ediclean',
