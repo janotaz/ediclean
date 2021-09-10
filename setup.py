@@ -6,11 +6,11 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='ediclean',
-    version='0.1.0',
+    version='0.1.1',
     description='Clean UN/EDIFACT PAXLST files from unsupported characters.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/goOICT/edicat',
+    url='https://github.com/janotaz/ediclean',
     author='Zoltan Janota',
     author_email='zoltan.janota@un.org',
     classifiers=[
@@ -31,7 +31,7 @@ setup(
         ],
     },
     project_urls={
-        'Bug Reports': 'https://github.com/goOICT/edicat/issues',
-        'Source': 'https://github.com/goOICT/edicat',
+        'Bug Reports': 'https://github.com/janotaz/ediclean/issues',
+        'Source': 'https://github.com/janotaz/ediclean',
     },
 )
