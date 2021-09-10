@@ -51,7 +51,7 @@ Email secured by UN Antivirus
 
 ```
 
-Cleansed file
+Cleaned file
 ``` shell
 $ ediclean ediclean/tests/testfiles/original/A.txt 
 UNA:+.? '
