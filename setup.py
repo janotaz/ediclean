@@ -6,7 +6,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='ediclean',
-    version='0.1.1',
+    version='0.1.2',
     description='A Python package to strip non-standard text blocks from UN/EDIFACT messages.',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -19,11 +19,10 @@ setup(
         'Topic :: Text Processing',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.8',
     ],
     keywords='paxlst edifact un/edifact',
     packages=['ediclean'],
-    python_requires='>=3.8',
+    python_requires='>=3.4',
     install_requires=[''],
     entry_points={
         'console_scripts': [
