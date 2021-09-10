@@ -21,7 +21,6 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.8',
     ],
-
     keywords='paxlst edifact un/edifact',
     packages=['ediclean'],
     python_requires='>=3.8',
@@ -31,8 +30,7 @@ setup(
             'ediclean = ediclean.__main__:main',
         ],
     },
-
-    project_urls={ 
+    project_urls={
         'Bug Reports': 'https://github.com/goOICT/edicat/issues',
         'Source': 'https://github.com/goOICT/edicat',
     },
