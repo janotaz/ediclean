@@ -17,7 +17,7 @@ pip3 install -U ediclean
 $ ediclean -h
 usage: ediclean [-h] [filename]
 
-Clean UN/EDIFACT PAXLST files from unsupported characters.
+Strip non-standard text blocks from UN/EDIFACT messages.
 
 positional arguments:
   filename    File containing UN/EDIFACT PAXLST message
