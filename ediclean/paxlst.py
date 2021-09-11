@@ -129,8 +129,6 @@ def cleanfile(filename):
 
     else:
         logging.error("File does not exist: " + filename)
-#        raise ValueError("Arrays must have the same size")
-#        sys.exit()
 
 
 def cleandir(source_dir, target_dir, extension):
