@@ -6,7 +6,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='ediclean',
-    version='0.1.3',
+    version='0.1.4',
     description=
     'A Python package to strip non-standard text blocks from UN/EDIFACT messages.',
     long_description=long_description,
