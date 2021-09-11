@@ -118,9 +118,6 @@ def clean(data):
             # logging.info (paxlst)
             return (paxlst)
 
-    else:
-        sys.exit()
-
 
 def cleanfile(filename):
 
@@ -132,4 +129,28 @@ def cleanfile(filename):
 
     else:
         logging.error("File does not exist: " + filename)
+#        raise ValueError("Arrays must have the same size")
+#        sys.exit()
+
+
+def cleandir(source_dir, target_dir, extension):
+
+    if not os.path.isdir(source_dir):
+        logging.error ("Source directory not found: " + source_dir)
         sys.exit()
+
+    if not os.path.isdir(target_dir):
+        logging.error ("Target directory not found: " + source_dir)
+        sys.exit()
+
+    for root, dirs, files in os.walk(source_dir):
+        for file in sorted(files):
+            target_content = cleanfile(os.path.join(root, file))
+
+            if target_content:
+                target = open(os.path.join(target_dir, file), "w")
+                target.write(target_content)
+                target.close()
+                logging.info ("Cleaned " + os.path.join(target_dir, file))
+            else:
+                sys.exit()
