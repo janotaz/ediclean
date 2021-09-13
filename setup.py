@@ -6,11 +6,12 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='ediclean',
-    version='0.1.2',
-    description='A Python package to strip non-standard text blocks from UN/EDIFACT messages.',
+    version='0.1.4',
+    description=
+    'A Python package to strip non-standard text blocks from UN/EDIFACT messages.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/janotaz/ediclean',
+    url='https://github.com/goOICT/ediclean',
     author='Zoltan Janota',
     author_email='zoltan.janota@un.org',
     classifiers=[
@@ -30,7 +31,7 @@ setup(
         ],
     },
     project_urls={
-        'Bug Reports': 'https://github.com/janotaz/ediclean/issues',
-        'Source': 'https://github.com/janotaz/ediclean',
+        'Bug Reports': 'https://github.com/goOICT/ediclean/issues',
+        'Source': 'https://github.com/goOICT/ediclean',
     },
 )

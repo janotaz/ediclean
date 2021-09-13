@@ -15,18 +15,22 @@ pip3 install -U ediclean
 ## Usage
 ``` shell
 $ ediclean -h
-usage: ediclean [-h] [filename]
+usage: ediclean [-h] [-s SOURCE_DIR] [-t TARGET_DIR] [filename]
 
-Clean UN/EDIFACT PAXLST files from unsupported characters.
+Strip non-standard text blocks from UN/EDIFACT messages.
 
 positional arguments:
-  filename    File containing UN/EDIFACT PAXLST message
+  filename              File containing UN/EDIFACT PAXLST message
 
 optional arguments:
-  -h, --help  show this help message and exit
+  -h, --help            show this help message and exit
+  -s SOURCE_DIR, --source_dir SOURCE_DIR
+  -t TARGET_DIR, --target_dir TARGET_DIR
 ```
 
 ### Examples
+
+#### Clean single file
 
 Original file
 ``` shell
@@ -85,6 +89,20 @@ UNT+159+PAX001'
 UNE+1+1'
 UNZ+1+2107130631'
 
+```
+
+#### Clean entire directory of files
+
+``` shell
+$ mkdir tests/testfiles/output
+
+$ ediclean -s tests/testfiles/original/ -t tests/testfiles/output/
+INFO:root:Cleaned tests/testfiles/output/A.txt
+INFO:root:Cleaned tests/testfiles/output/B.txt
+INFO:root:Cleaned tests/testfiles/output/C.txt
+INFO:root:Cleaned tests/testfiles/output/D.txt
+INFO:root:Cleaned tests/testfiles/output/E.txt
+INFO:root:Cleaned tests/testfiles/output/F.txt
 ```
 
 ## Currently supported message types
