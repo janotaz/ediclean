@@ -1,12 +1,15 @@
-from setuptools import setup, find_packages
+""" Standard PyPi dynamic metadata configuration
+"""
+
 import pathlib
+from setuptools import setup
 
 here = pathlib.Path(__file__).parent.resolve()
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='ediclean',
-    version='0.1.4',
+    version='0.1.5',
     description=
     'A Python package to strip non-standard text blocks from UN/EDIFACT messages.',
     long_description=long_description,
@@ -18,7 +21,7 @@ setup(
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Topic :: Text Processing',
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python :: 3',
     ],
     keywords='paxlst edifact un/edifact',
