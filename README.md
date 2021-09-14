@@ -11,6 +11,10 @@ UN/EDIFACT files often contain headers and footers that are added by application
 ```
 pip3 install -U ediclean
 ```
+### Upgrade
+```
+pip3 install -U ediclean --upgrade
+```
 
 ## Usage
 ``` shell
