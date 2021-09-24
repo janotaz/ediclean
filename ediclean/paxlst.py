@@ -1,3 +1,6 @@
+"""
+Module docstring
+"""
 import os
 import logging
 import re
@@ -36,12 +39,12 @@ def is_paxlst(data):
 
         else:
             logging.error(
-                'Not a valid PAXLST file. PAXLST segments missing: ' +
+                'Not a valid PAXLST message. Segments missing: ' +
                 str(paxlst_segments_missing))
             return False
 
     else:
-        logging.error('Not a valid EDIFACT file. EDIFACT segments missing: ' +
+        logging.error('Not a valid EDIFACT message. Segments missing: ' +
                       str(edifact_segments_missing))
         return False
 
@@ -92,7 +95,7 @@ def clean(data):
                                   segment_terminator + "\n")
 
             # logging.info (paxlst)
-            return (paxlst)
+            return paxlst
 
         # Service String Advice absent
         else:
@@ -116,7 +119,10 @@ def clean(data):
                                   segment_terminator + "\n")
 
             # logging.info (paxlst)
-            return (paxlst)
+            return paxlst
+
+    else:
+        return False
 
 
 def cleanfile(filename):

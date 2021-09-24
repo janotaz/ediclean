@@ -1,16 +1,15 @@
 import argparse
 import os
-import sys
 import logging
 import ediclean
 import ediclean.paxlst as paxlst
 
 
 def dir_path(path):
-    if os.path.isdir(path):
-        return path
+    if not os.path.isdir(path):
+        logging.error("Directory does not exist: %s", path)
     else:
-        logging.error ("Directory does not exist: " + path)
+        return path
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -20,7 +19,6 @@ def main() -> None:
     parser.add_argument('filename',
                         nargs='?',
                         help="File containing UN/EDIFACT PAXLST message")
-    
     parser.add_argument('-s','--source_dir', type=dir_path)
     parser.add_argument('-t','--target_dir', type=dir_path)
     parser.add_argument('--version',
@@ -36,7 +34,7 @@ def main() -> None:
         elif not args.source_dir and args.target_dir:
             print("Source directory missing")
         elif args.source_dir and args.target_dir:
-            paxlst.cleandir(args.source_dir, args.target_dir, "")        
+            paxlst.cleandir(args.source_dir, args.target_dir, "")
         elif not args.filename:
             parser.print_usage()
         elif args.filename:
@@ -45,7 +43,8 @@ def main() -> None:
             pass
 
     except SystemExit as err:
-        if err.code == 2: parser.print_help()
+        if err.code == 2: 
+            parser.print_help()
 
 
 if __name__ == '__main__':
