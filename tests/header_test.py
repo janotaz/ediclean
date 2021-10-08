@@ -1,3 +1,6 @@
+"""
+Test: header removal
+"""
 import unittest
 import ediclean.paxlst as paxlst
 
