@@ -1,9 +1,15 @@
+"""
+Test: clean entire directory of files
+"""
 import os
 import unittest
 import ediclean.paxlst as paxlst
 
 
 class TestEdifact(unittest.TestCase):
+    """ This test only checks if the cleandir command cleaned all files in the folder
+        by determining their existence and verifying if the file content is EDIFACT
+    """
     def test_header(self):
 
         # this test only checks if the cleandir command cleaned all files in the folder
@@ -25,11 +31,9 @@ class TestEdifact(unittest.TestCase):
             print ("Successfully created the directory %s " % target_dir)
 
 
-        paxlst.cleandir(testfiles_dir, target_dir, "")
-
+        paxlst.cleandir(testfiles_dir, target_dir)
 
         # for every cleaned file, check if it is valid PAXLST
-
         self.assertEqual.__self__.maxDiff = None
         for root, dirs, files in os.walk(target_dir):
             for file in sorted(files):

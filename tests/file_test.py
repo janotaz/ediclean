@@ -1,3 +1,6 @@
+"""
+Test: header removal
+"""
 import os
 import unittest
 import ediclean.paxlst as paxlst
@@ -23,7 +26,8 @@ class TestEdifact(unittest.TestCase):
 #                if not os.path.exists(cleaned_file_dir):
 #                    os.makedirs(cleaned_file_dir)
 #
-#                cleaned_file_pointer = open(os.path.join(os.path.dirname(__file__), "testfiles", "cleaned", basename), "w")
+#                cleaned_file_pointer = open(os.path.join(os.path.dirname(__file__),
+#                "testfiles", "cleaned", basename), "w")
 #
 #                #write string to file
 #                n = cleaned_file_pointer.write(cleaned_file)

@@ -11,6 +11,10 @@ UN/EDIFACT files often contain headers and footers that are added by application
 ```
 pip3 install -U ediclean
 ```
+### Upgrade
+```
+pip3 install -U ediclean --upgrade
+```
 
 ## Usage
 ``` shell
@@ -110,4 +114,4 @@ INFO:root:Cleaned tests/testfiles/output/F.txt
 
 <!-- LICENSE -->
 ## License
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the Apache 2.0 License. See `LICENSE` for more information.
