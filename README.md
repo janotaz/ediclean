@@ -1,7 +1,7 @@
 # ediclean
 A Python package to strip non-standard text blocks from UN/EDIFACT messages.
 
-[![CircleCI](https://circleci.com/gh/janotaz/ediclean/tree/main.svg?style=shield&circle-token=709edaf489003821e0bd2209bacb8f5713097e58)](https://circleci.com/gh/janotaz/ediclean/tree/main)
+[![CircleCI](https://circleci.com/gh/janotaz/ediclean/tree/main.svg?style=shield&circle-token=709edaf489003821e0bd2209bacb8f5713097e58)](https://circleci.com/gh/janotaz/ediclean/tree/main) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6bf9ed8466c34ae5ab9c08bc691f0a29)](https://www.codacy.com/gh/janotaz/ediclean/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=janotaz/ediclean&amp;utm_campaign=Badge_Grade)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
